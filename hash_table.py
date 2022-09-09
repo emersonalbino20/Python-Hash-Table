@@ -16,11 +16,16 @@ class Hash:
             print("invalid type, inform a str value")
 
     def contains(self, value):
+        """
+        >>> obj = Hash()
+        >>> obj.insert('emerson')
+        >>> obj.contains('emerson')
+        True
+        >>> obj.contains('albino')
+        False
+        """
         try:
             index = self.hash_function(value)
             return self.hash_table[index] == value
         except TypeError:
             print("invalid type, inform a str value")
-
-if __name__ == "__main__":
-    obj = Hash()

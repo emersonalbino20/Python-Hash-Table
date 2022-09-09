@@ -1,6 +1,6 @@
 class Hash:
     def __init__(self):
-        self.hash_table = []
+        self.hash_table = [None, None, None, None, None, None, None, None, None]
 
     def hash_function(self, value):
         hash_code = 0

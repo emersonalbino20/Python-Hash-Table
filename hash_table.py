@@ -1,6 +1,6 @@
 class Hash:
     def __init__(self):
-        self.safe = []
+        self.hash_table = []
 
     def hash_function(self, value):
         hash_code = 0
@@ -11,7 +11,7 @@ class Hash:
     def insert(self, value):
         try:
             index = self.hash_function(value)
-            self.safe.insert(index, value)
+            self.hash_table.insert(index, value)
         except TypeError:
             print("invalid type, inform a str value")
 

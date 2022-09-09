@@ -15,5 +15,12 @@ class Hash:
         except TypeError:
             print("invalid type, inform a str value")
 
+    def contains(self, value):
+        try:
+            index = self.hash_function(value)
+            return self.hash_table[index] == value
+        except TypeError:
+            print("invalid type, inform a str value")
+
 if __name__ == "__main__":
     obj = Hash()
